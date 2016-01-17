@@ -1,16 +1,12 @@
 <?php
 session_start();
-require_once ('twitteroauth/twitteroauth.php');
-// Consumer keyの値
-$consumer_key = getenv('CON_KEY');
-// Consumer secretの値
-$consumer_secret = getenv('CON_SECRET');
+require_once ('config.php');
 
 // パラメータからoauth_verifierを取得
 $verifier = $_GET['oauth_verifier'];
 
 // Consumer key,Consumer secret, Request token, Request secretを使ってOAuthオブジェクト生成
-$to = new TwitterOAuth($consumer_key,$consumer_secret,$_SESSION['request_token'],$_SESSION['request_token_secret']);
+$to = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION['request_token'], $_SESSION['request_token_secret']);
 // oauth_verifierを使ってAccess tokenを取得
 $access_token = $to->getAccessToken($verifier);
 
