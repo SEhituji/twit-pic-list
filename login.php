@@ -3,7 +3,7 @@ session_start();
 require_once ('config.php');
 
 // OAuthオブジェクト生成
-$to = new TwitterOAuth($consumer_key, $consumer_secret);
+$to = new TwitterOAuth(CON_KEY, CON_SECRET);
 // callbackURLを指定してRequest tokenを取得
 
 $tok = $to->getRequestToken(" http://". $gip ."/twit/callback.php");
