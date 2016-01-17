@@ -6,4 +6,4 @@ $consumer_key = getenv('CON_KEY');
 // Consumer secretの値
 $consumer_secret = getenv('CON_SECRET');
 // グローバルＩＰ読み込み
-$gip = getenv('GIP')
+$gip = getenv('GIP');

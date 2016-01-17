@@ -18,4 +18,3 @@ $_SESSION['screen_name']        = $access_token['screen_name'];
 
 // TOPページへ
 header("Location: index.php");
-?>
