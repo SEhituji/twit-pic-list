@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once ('config.php');
+require_once ('twitteroauth/twitteroauth.php');
 
 // セッションにアクセストークンがなかったらloginページに飛ぶ
 if($_SESSION['oauth_token']===NULL && $_SESSION['oauth_token_secret']===NULL){

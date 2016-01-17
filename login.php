@@ -1,11 +1,16 @@
 <?php
 session_start();
-require_once ('config.php');
+require_once ('twitteroauth/twitteroauth.php');
+
+// Consumer keyの値
+$consumer_key = getenv('CON_KEY');
+// Consumer secretの値
+$consumer_secret = getenv('CON_SECRET');
 
 // OAuthオブジェクト生成
-$to = new TwitterOAuth(CON_KEY, CON_SECRET);
+$to = new TwitterOAuth($consumer_key, $consumer_secret);
 // callbackURLを指定してRequest tokenを取得
-
+$gip = getenv('GIP')
 $tok = $to->getRequestToken(" http://". $gip ."/twit/callback.php");
 // セッションに保存
 $_SESSION['request_token']=$token=$tok['oauth_token'];
