@@ -9,7 +9,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
 
 //コールバックURLをここでセット
-$request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => GIP));
+$request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => OAUTH_CALLBACK));
 
 //callback.phpで使うのでセッションに入れる
 $_SESSION['oauth_token'] = $request_token['oauth_token'];
