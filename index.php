@@ -4,7 +4,7 @@ require_once ('twitteroauth/twitteroauth.php');
 
 // セッションにアクセストークンがなかったらloginページに飛ぶ
 if($_SESSION['oauth_token']===NULL && $_SESSION['oauth_token_secret']===NULL){
-	header("Location: ./login.php");
+	echo "<p><a href=\"./login.php\">ログイン</a></p>";
 }
 
 $user_id = $_SESSION['user_id'];
