@@ -1,12 +1,12 @@
 <?php
 session_start();
-require_once ('../config/config.php');
-require_once ('../vendor/autoload.php');
+require_once ('../php/config.php');
+require_once ('../php/twitteroauth/autoload.php');
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 //login.phpでセットしたセッション
-$request_token = array();  // [] は array() の短縮記法。詳しくは以下の「追々記」参照
+$request_token = [];  // [] は array() の短縮記法。詳しくは以下の「追々記」参照
 $request_token['oauth_token'] = $_SESSION['oauth_token'];
 $request_token['oauth_token_secret'] = $_SESSION['oauth_token_secret'];
 
