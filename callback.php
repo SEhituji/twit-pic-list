@@ -28,10 +28,10 @@ $_SESSION['access_token'] = $connection->oauth("oauth/access_token", array("oaut
 session_regenerate_id();
 
 // token keyとtoken secret, user_id, screen_nameをセッションに保存
-$_SESSION['oauth_token']        = $access_token['oauth_token'];
-$_SESSION['oauth_token_secret'] = $access_token['oauth_token_secret'];
-$_SESSION['user_id']            = $access_token['user_id'];
-$_SESSION['screen_name']        = $access_token['screen_name'];
+//$_SESSION['oauth_token']        = $access_token['oauth_token'];
+//$_SESSION['oauth_token_secret'] = $access_token['oauth_token_secret'];
+//$_SESSION['user_id']            = $access_token['user_id'];
+//$_SESSION['screen_name']        = $access_token['screen_name'];
 
 // TOPページへ
 header("Location: index.php");
